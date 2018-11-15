@@ -8,6 +8,7 @@ const register = (remove) => {
       const data = {
         "Name": config.name,
         "ID": serviceID,
+        "Address": config.address,
         "Check": {
           "Name": config.check.name,
           "HTTP": config.check.checkurl,

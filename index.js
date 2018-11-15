@@ -11,7 +11,7 @@ const register = (remove) => {
         "Check": {
           "Name": config.check.name,
           "HTTP": config.check.checkurl,
-          "Interval": "5s",
+          "Interval": config.check.interval,
           "DeregisterCriticalServiceAfter": "10s"
         },
         "Tags": []

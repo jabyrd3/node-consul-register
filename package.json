@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jabyrd3/node-consul-register/issues"
   },
-  "homepage": "https://github.com/jabyrd3/node-consul-register#readme"
+  "homepage": "https://github.com/jabyrd3/node-consul-register#readme",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
 }

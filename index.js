@@ -78,6 +78,12 @@ process.once('SIGUSR2', function () {
       process.kill(process.pid, 'SIGUSR2'));
 });
 
+process.once('SIGTERM', function () {
+  register(true)
+    .then(() =>
+      process.kill(process.pid, 'SIGUSR2'));
+});
+
 process.on('unhandledRejection', function(reason, p){
   console.log('unhandledReject', reason, p);
 });

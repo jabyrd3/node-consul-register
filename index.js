@@ -5,7 +5,7 @@ let config;
 const register = (remove) => {
   return new Promise((resolve, rej) => {
     if(!remove){
-      const postData = JSON.stringify({
+      const data = {
         "Name": config.name,
         "ID": serviceID,
         "Check": {
@@ -15,8 +15,9 @@ const register = (remove) => {
           "DeregisterCriticalServiceAfter": "10s"
         },
         "Tags": []
-      });
-      console.log('starting app herp');
+      };
+      const postData = JSON.stringify(data);
+      console.log('registering via consul: ', data);
       const req = http.request({
         method: "PUT",
         hostname: config.hostname,
@@ -37,7 +38,7 @@ const register = (remove) => {
       req.write(postData);
       req.end();
     } else {
-      console.log("what fuck")
+      console.log("deregging console service")
         const req = http.request({
           method: "PUT",
           hostname: config.hostname,

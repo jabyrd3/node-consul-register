@@ -10,7 +10,7 @@ const register = (remove) => {
         "ID": serviceID,
         "Check": {
           "Name": config.check.name,
-          "HTTP": config.checkurl,
+          "HTTP": config.check.checkurl,
           "Interval": "5s",
           "DeregisterCriticalServiceAfter": "10s"
         },

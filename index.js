@@ -9,7 +9,7 @@ const register = (remove) => {
         "Name": config.name,
         "ID": serviceID,
         "Check": {
-          "Name": "Santa",
+          "Name": config.check.name,
           "HTTP": config.checkurl,
           "Interval": "5s",
           "DeregisterCriticalServiceAfter": "10s"
